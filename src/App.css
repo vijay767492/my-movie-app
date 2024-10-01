@@ -1,38 +1,159 @@
-.App {
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('C:/Users/vijay/OneDrive/Pictures/mov1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Make all text white for better visibility on dark backgrounds */
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.app-sidebar {
+  width: 200px;
+  background-color: #ec8600;
+  padding: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #00f1b5;
+  color: white;
+  border: red;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #007d7a;
+}
+
+.app-header {
+  background-color: #00f1b5;
+  color: rgb(78, 80, 245);
+  padding: 2px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-sidebar {
+  background: linear-gradient(90deg, #00f1b5, #0077b6);
+  padding: 20px;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.app-sidebar li:hover {
+  background-color: #ddd;
+}
+
+.movie-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.movie-form {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* Set label width and input field width */
+  gap: 15px;
+  align-items: center; /* Ensure the labels and inputs are vertically aligned */
+  background-color: rgba(255, 255, 255, 0.7); /* Light background for form fields */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #8A2BE2; /* Violet color for labels */
+  text-align: right; /* Align labels to the right to align with input fields */
+}
+
+input[type="text"], input[type="checkbox"] {
+  width: 60%; /* Both inputs start at the same point and take up the same space */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #8A2BE2; /* Violet border */
+  border-radius: 5px;
+  background-color: white; /* Ensure text boxes have a white background */
+  color: black; /* Black text inside the input for readability */
+}
+
+input[type="checkbox"] {
+  width: auto; /* Auto width for checkbox but still aligned with the text input */
+  margin-right: 10px;
+}
+
+.submit-button {
+  grid-column: span 2; /* Makes the submit button span across the form */
+  padding: 10px 20px;
+  background-color: #8A2BE2; /* Violet color */
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background-color: #0dad3d; /* Darker violet on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 50px;
+}
+
+.message {
+  color: green;
+  margin-top: 10px;
+}
+
+.app-header, .app-footer {
+  background: linear-gradient(90deg, #00f1b5, #0077b6); /* Add a gradient for a trendy effect */
+  color: white;
+  text-align: center;
+  padding: 20px; /* Increase padding for a modern, spacious feel */
+  font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+  font-size: 1.5rem; /* Make the text a bit larger */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a more dynamic look */
+}
+
+.app-header h1, .app-footer p {
+  margin: 0;
+  letter-spacing: 2px; /* Adds spacing between letters for a sleek design */
+}
+
+.app-header h1 {
+  font-weight: 700; /* Make the header text bold */
+}
+
+.app-footer p {
+  font-size: 1.2rem;
+  opacity: 0.9; /* Slightly reduce opacity for a softer footer */
+}
+
+.app-footer {
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0;
+  width: 100%;
 }
